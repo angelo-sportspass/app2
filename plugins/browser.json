@@ -36,6 +36,9 @@
     },
     "cordova-plugin-vibration": {
       "PACKAGE_NAME": "com.sportspass.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.sportspass.app"
     }
   },
   "dependent_plugins": {

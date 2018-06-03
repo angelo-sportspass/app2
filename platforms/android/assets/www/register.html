@@ -1,4 +1,4 @@
-<ons-page id="registerPage">
+<ons-page id="register">
   <ons-toolbar class="top-menu">
     <div class="left">
 	    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
@@ -15,28 +15,33 @@
 		<h3>Create a SportsPass Account</h3>
 		<p>To be able to add a membership card to your wallet, you first need to create a SportsPass account.</p>
 		<p>
-	    <input type="text" class="text-input" id="first_name" placeholder="First Name" />
+
+	    <ons-input id="first_name" type="text" placeholder="First Name" class="form-control"></ons-input>
 	  </p>
 	  <p>
-	    <input type="text" class="text-input" id="last_name" placeholder="Last Name" />
+	    <ons-input id="last_name" type="text" placeholder="Last Name" class="form-control"></ons-input>
 	  </p>
 	  <p>
-	    <input type="text" class="text-input" id="email" placeholder="Email" />
+	    <ons-input id="email" type="text" placeholder="Email" class="form-control"></ons-input>
 	  </p>
 	  <p>
-	    <input type="text" class="text-input" id="post_code" placeholder="Post Code" />
+	    <ons-input id="post_code" type="text" placeholder="Post Code" class="form-control"></ons-input>
 	  </p>
 	  <p>
-	    <input type="password" class="text-input" id="password" placeholder="Password" />
+	    <ons-input id="password" type="password" placeholder="Password" class="form-control"></ons-input>
 	  </p>
 	  <p style="margin-top: 30px;">
 
 	    <ons-button  modifier="large" component="button/register-action">Sign up</ons-button>
 	  </p>
 	  <p>
-	    <ons-button modifier="quiet" component="button/login">
+<!-- 	    <ons-button modifier="quiet" component="button/login">
         Login
         </ons-button> 
+ -->
+        <a class="" id="login" >
+          Login.
+        </a>
 	  </p>
 	</div>
 

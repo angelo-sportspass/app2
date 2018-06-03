@@ -8,18 +8,6 @@ myApp.services = {
 
   	authenticate: function(data) {
 
-    	// var xhr = new XMLHttpRequest();
-
-    	// xhr.open("POST", "http://api.sportsnomads.com.au/v1/account/login");
-    	// xhr.setRequestHeader('Content-type', 'application/json');
-    	// xhr.onload = function() {
-     //   		var res = JSON.parse(xhr.responseText);
-
-     //   		ons.notification.alert(res.account.first_name);
-     // 	}
-
-   	 // 	xhr.send(JSON.stringify(data));
-
    	 	jQuery.ajax({
           type: 'POST',
           data: data,
@@ -66,6 +54,7 @@ myApp.services = {
 					}
 
 					console.log(content);
+					
 
             // alert('Your comment was successfully added');
         },

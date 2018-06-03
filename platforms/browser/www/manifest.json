@@ -7,5 +7,6 @@
   "description": "Sportspass",
   "author": "Sportspass",
   "icons": [],
+  "orientation": "portrait",
   "start_url": "index.html"
 }

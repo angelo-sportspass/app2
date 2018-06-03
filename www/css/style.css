@@ -148,9 +148,9 @@ body {font-family: 'exoregular';}
     margin-top: 30px;
 }
 
-.form-fields input {
+.form-fields ons-input {
     display: block; 
-    width: 95%;
+    width: 80%;
     font-family: 'exoregular';
     margin: auto;
     padding: 10px;
@@ -196,8 +196,11 @@ ons-splitter-side ons-list ons-list-item {
 
 ons-toolbar:not([inline]) {
     background: rgba(0, 0, 0, 1);
-    position: relative;
+    /*position: relative;*/
     border-bottom: 3px solid #5bcbf3;
+}
+.left {
+    float: left;
 }
 /*.page__background  {
 	background-image: url(../img/app-bg.jpg) center top no-repeat;

@@ -1,36 +1,38 @@
-<ons-page id="loginPage">
-	<ons-toolbar class="top-menu">
-	  <div class="left">
-	    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
-	    	<ons-icon icon="fa-arrow-left"></ons-icon>
-	    </a>
-	  </div>
-	  <div class="center">Login</div>
-	  <div class="right">
-	  	<span style="opacity: 0">no text..</span>
-	  </div>
-	</ons-toolbar>
+<ons-page id="login">
 
-	<div class="">
-	  <iframe width="100%" height="230" src="https://www.youtube.com/embed/qp_ZMJnRL9k?modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-	</div>
-	<div class="form-fields">
-	  <p>
-	    <input type="text" class="text-input" id="user_name" placeholder="Email" />
-	  </p>
-	  <p>
-	    <input type="password" class="text-input" id="password" placeholder="Password" />
-	  </p>
-	  <p style="margin-top: 30px;">
-	  	<!-- ng-click="login( data )" -->
-	    <ons-button  modifier="large" component="button/login-action">Sign in</ons-button>
-	  </p>
-	  <p>
-	    Don’t have a SportsPass account? 
-	    	<ons-button class="" modifier="quiet" component="button/register" >
-              Signup.
-            </ons-button>
-	   </p>
+<ons-toolbar class="top-menu">
+  <div class="left">
+    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
+    	<ons-icon icon="fa-arrow-left"></ons-icon>
+    </a>
+  </div>
+  <div class="center">Login</div>
+  <div class="right">
+  	<span style="opacity: 0">no text..</span>
+  </div>
+</ons-toolbar>
+
+<div class="">
+  <iframe width="100%" height="230" src="https://www.youtube.com/embed/qp_ZMJnRL9k?modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="form-fields">
+  <p>
+    <ons-input id="user_name" type="text" placeholder="Username" class="form-control"></ons-input>
+  </p>
+  <p>
+    <!-- <input type="password" class="text-input" id="password" placeholder="Password" /> -->
+     <ons-input id="password" type="password" placeholder="Password" class="form-control"></ons-input>
+  </p>
+  <p style="margin-top: 30px;">
+  	<!-- ng-click="login( data )" -->
+    <ons-button  modifier="large" component="button/login-action">Sign in</ons-button>
+  </p>
+  <p>
+    Don’t have a SportsPass account? <br/>
+    	<a class="" id="register" >
+          Signup.
+        </a>
+   </p>
 	</div>
 
 </ons-page>
