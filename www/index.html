@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Onsen UI Memo App 2.0</title>
+
+  <script src="lib/onsen/js/onsenui.js"></script>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <!-- <script src="js/services.js"></script> -->
+  <!-- <script src="js/controllers.js"></script> -->
+
+  <!-- Services -->
+  <script src="js/services/main.js"></script>
+
+  <!-- Controllers and actions -->
+  <script src="js/controller/main.controller.js"></script>
+  <!-- <script src="js/controller/login.controller.js"></script> -->
+
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-icon.css">
+</head>
+
+<body>
+
+  <!-- First navigation component: Navigator. This will remain always on top of the app. -->
+  <ons-navigator id="mainNavigator" page="main.html">
+  </ons-navigator>
+
+
+  <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
+  <template id="main.html">
+    <ons-page id="mainPage" class="landing-page">
+      <div  style="margin-top: 80%;margin-left: 10%;">
+        <ons-row>
+          <ons-col width="65%">
+            <img src="img/logo.png" id="logo" style="width: 100%">
+          </ons-col>
+        </ons-row>
+
+        <ons-row>
+          <ons-col width="65%" >
+            <ons-button id="button-login" modifier="large" component="button/login">
+            Login
+            </ons-button> 
+
+          </ons-col>
+        </ons-row>
+
+        <ons-row>
+          <ons-col width="65%">
+
+            <ons-button id="button-register" modifier="large"  component="button/register" >
+              Register
+            </ons-button>
+       
+          </ons-col>
+        </ons-row>
+      </div>
+    </ons-page>
+  </template>
+
+</body>
+
+</html>

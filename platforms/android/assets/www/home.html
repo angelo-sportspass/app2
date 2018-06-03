@@ -1,0 +1,51 @@
+<ons-page id="homePage" class="home-page">
+
+ 	<ons-toolbar class="top-menu">
+	  <div class="left">
+	    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
+	    	<ons-icon icon="fa-arrow-left"></ons-icon>
+	    </a>
+	  </div>
+	  <div class="center">Home</div>
+	  <div class="right">
+	  	<span style="opacity: 0">no text..</span>
+	  </div>
+	</ons-toolbar>
+
+	<div class="home" >
+	  <div class="home-group-icon clearfix ng-scope">
+      <a class="home-icon-holder" href="https://store.neatideas.com.au/sportspass/" onClick="javascript:return openExternal(this)">
+          <i class="icon-movies"></i>
+          <h5> Movies </h5>
+      </a>
+      <a class="home-icon-holder" href="https://themeparks.com.au/partner/sportspass" onClick="javascript:return openExternal(this)">
+            <i class="icon-themeparks"></i>
+            <h5> Theme Parks </h5>
+      </a>
+      <div class="home-icon-holder" component="button/hotoffers-page">
+          <i class="icon-hotoffers"></i>
+          <h5> Hot Offers </h5>
+      </div>
+      <a class="home-icon-holder" href="https://booking.amfbowling.com.au/sportspass/?utm_campaign=SportsPass&utm_source=SportPass&utm_medium=Referral&utm_content=bowling" onClick="javascript:return openExternal(this)">
+          <i class="icon-bowling"></i>
+          <h5> Bowling </h5>
+      </a>
+      <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onClick="javascript:return openExternal(this)">
+          <i class="icon-gift"></i>
+          <h5> Gift Ideas </h5>
+      </a>
+      <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onClick="javascript:return openExternal(this)">
+          <i class="icon-experience"></i>
+          <h5> Experiences </h5>
+      </a>
+      <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onClick="javascript:return openExternal(this)">
+          <i class="icon-tickets"></i>
+          <h5> Tickets </h5>
+      </a>
+      <div class="home-icon-holder"  ng-click="hotoffers()">
+          <i class="icon-clubperks"></i>
+          <h5> Club Perks </h5>
+      </div>
+		</div>
+	</div>
+</ons-page>

@@ -1,0 +1,43 @@
+<ons-page id="registerPage">
+  <ons-toolbar class="top-menu">
+    <div class="left">
+	    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
+	    	<ons-icon icon="fa-arrow-left"></ons-icon>
+	    </a>
+	  </div>
+	  <div class="center">Register</div>
+	  <div class="right">
+	  	<span style="opacity: 0">no text..</span>
+	  </div>
+  </ons-toolbar>
+
+	<div class="form-fields">
+		<h3>Create a SportsPass Account</h3>
+		<p>To be able to add a membership card to your wallet, you first need to create a SportsPass account.</p>
+		<p>
+	    <input type="text" class="text-input" id="first_name" placeholder="First Name" />
+	  </p>
+	  <p>
+	    <input type="text" class="text-input" id="last_name" placeholder="Last Name" />
+	  </p>
+	  <p>
+	    <input type="text" class="text-input" id="email" placeholder="Email" />
+	  </p>
+	  <p>
+	    <input type="text" class="text-input" id="post_code" placeholder="Post Code" />
+	  </p>
+	  <p>
+	    <input type="password" class="text-input" id="password" placeholder="Password" />
+	  </p>
+	  <p style="margin-top: 30px;">
+
+	    <ons-button  modifier="large" component="button/register-action">Sign up</ons-button>
+	  </p>
+	  <p>
+	    <ons-button modifier="quiet" component="button/login">
+        Login
+        </ons-button> 
+	  </p>
+	</div>
+
+</ons-page>
