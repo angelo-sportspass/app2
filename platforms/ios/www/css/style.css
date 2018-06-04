@@ -165,6 +165,7 @@ body {font-family: 'exoregular';}
     font-family: 'exoregular';
     padding: 10px;
     background-color: #5bcbf3;
+    width: 85%;
 }
 
 .form-fields a {
@@ -188,8 +189,13 @@ body {font-family: 'exoregular';}
 
 .hotoffers-group ons-col {
     padding: 0 5px;
+    margin-bottom: 15px;
 }
 
+ons-row#hotoffer-list {
+    padding: 25px 0;
+}
+  
 ons-splitter-side ons-list ons-list-item {
     font-family: 'exoregular';
 }
