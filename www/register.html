@@ -5,16 +5,14 @@
 	    	<ons-icon icon="fa-arrow-left"></ons-icon>
 	    </a>
 	  </div>
-	  <div class="center">Register</div>
+	  <div class="center"><img src="img/logo-top.png"></div>
 	  <div class="right">
 	  	<span style="opacity: 0">no text..</span>
 	  </div>
   </ons-toolbar>
 
-	<div class="form-fields">
-		<h3>Create a SportsPass Account</h3>
-		<p>To be able to add a membership card to your wallet, you first need to create a SportsPass account.</p>
-		<p>
+	<div class="form-fields signup">
+		<h3>Sign Up</h3>
 
 	    <ons-input id="first_name" type="text" placeholder="First Name" class="form-control"></ons-input>
 	  </p>
@@ -22,7 +20,7 @@
 	    <ons-input id="last_name" type="text" placeholder="Last Name" class="form-control"></ons-input>
 	  </p>
 	  <p>
-	    <ons-input id="email" type="text" placeholder="Email" class="form-control"></ons-input>
+	    <ons-input id="email" type="text" placeholder="Email Address" class="form-control"></ons-input>
 	  </p>
 	  <p>
 	    <ons-input id="post_code" type="text" placeholder="Post Code" class="form-control"></ons-input>
@@ -30,17 +28,29 @@
 	  <p>
 	    <ons-input id="password" type="password" placeholder="Password" class="form-control"></ons-input>
 	  </p>
+
+	  <p>
+	  	<ons-list>
+	  		<ons-list-item >
+			  	<label class="left">
+			        <ons-input type="checkbox" id="confirm"></ons-checkbox>
+			    </label>
+			    <label for="check-1" class="center confirm-label">
+			        By clicking Login or Join, I agree that I am 18+ or 14+ and have parent/guardian consent & I’ve read and agree to the Terms & Conditions & Privacy Collection Statement for SportsPass.
+			    </label>
+			</ons-list-item>
+		</ons-list>
+	  </p>
 	  <p style="margin-top: 30px;">
 
 	    <ons-button  modifier="large" component="button/register-action">Sign up</ons-button>
 	  </p>
-	  <p>
-<!-- 	    <ons-button modifier="quiet" component="button/login">
-        Login
-        </ons-button> 
- -->
+
+	  <p class="signup-login-btn">
+	  	 <i>Already have an account?</i> <br/>
+	  	 &nbsp;
         <a class="" id="login" >
-          Login.
+          LOGIN HERE
         </a>
 	  </p>
 	</div>

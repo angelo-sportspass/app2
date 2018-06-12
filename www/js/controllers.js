@@ -44,9 +44,16 @@ sportspass.controllers = {
       let email      = page.querySelector('#email').value;
       let post_code  = page.querySelector('#post_code').value;
       let password   = page.querySelector('#password').value;
-      
-      // Register
-      sportspass.services.register(first_name, last_name, email, password, post_code);
+      let confirm    = page.querySelector('#confirm').checked;
+
+      if (confirm)
+      {
+        // Register
+        sportspass.services.register(first_name, last_name, email, password, post_code);
+      } else {
+        ons.notification.alert('Please agree to all terms and conditions.');
+      }
+        
     });
 
     $('#login').on('click', function() {
@@ -55,6 +62,31 @@ sportspass.controllers = {
   },
 
   homePage(page) {
+
+    sportspass.services.accountCards();
+    let cards = sportspass.storage.show('cards');
+    let cashBack = 0.00;
+
+    setTimeout(function() { 
+
+      if (cards)
+      {
+        var content = "";
+        cards.forEach(function(item, index){
+
+          content += '<ons-carousel-item >' +
+                      '<img src="'+item.club.front_card_image+'">' +
+                      '<p>'+item.first_name +' '+ item.last_name +'</p>' +
+                    '</ons-carousel-item>';
+          
+        });
+
+        $("#carousel").append(content);
+
+        $("#home-ewallet-cashback").append('$ ' + parseFloat(cashBack).toFixed(2));
+      }
+      
+    }, 2000);  
 
     $('#hotoffers-page').on('click', function() {
         document.querySelector('#mainNavigator').pushPage('hotoffers.html', { animation: 'lift'});
@@ -73,14 +105,48 @@ sportspass.controllers = {
       {
         banners.forEach(function(item, index){
 
-          $("#hotoffer-list").append(
-            '<ons-col width="50%">' +
-              '<img width="100%" src="'+item.image+'" />' +
-            '</ons-col>'
-          );
+          if (item.image)
+          {
+            $("#hotoffer-list").append(
+              '<ons-col width="50%">' +
+                '<a href="'+sportspass.services.website+'" onclick="return sportspass.openExternal(this)"><img width="100%" src="'+item.image+'" /></a>' +
+              '</ons-col>'
+            );
+          }
+          
         });
       }
     }, 2000);
+
+    $('[component="select/categories"]').on('change', function() {
+
+      let category = page.querySelector("#categories").value;
+
+      sportspass.services.hotoffers();
+
+      $("#hotoffer-list").html("");
+
+      setTimeout(function() { 
+
+          let hotoffers = sportspass.storage.show('hotoffers');
+          let banners   = hotoffers.banners;
+
+          if (banners)
+          {
+            banners.forEach(function(item, index){
+
+              if (item.image)
+              {
+                $("#hotoffer-list").append(
+                  '<ons-col width="50%">' +
+                    '<a href="'+sportspass.services.website+'" onclick="return sportspass.openExternal(this)"><img width="100%" src="'+item.image+'" /></a>' +
+                  '</ons-col>'
+                );
+              }
+            });
+          }
+      }, 2000);
+    });
 
   }
 

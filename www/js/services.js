@@ -5,6 +5,7 @@
 sportspass.services = {
 
   host: 'http://api.sportsnomads.com.au/v1',
+  website: 'http://sportsnomads.com.au/login',
 
   login(username, password) {
 
@@ -65,14 +66,28 @@ sportspass.services = {
   hotoffers() {
 
     let endpoint = '/banner/banner-search?search=true';
+    let cat   = document.querySelector("#categories").value;
+    let data  = {};
+    
+    if (cat)
+    {
+        data = {
+          banner_type: 'hot_offer',
+          categories: JSON.stringify([{
+            id: cat
+          }])
+        };
+    } else {
+      data.banner_type = 'hot_offer';
+    }
+    
+    sportspass.storage.destroy('hotoffers');
 
     $.ajax({
       type: "POST",
       header: {'Content-type' : 'application/json'},
       url: this.host + endpoint,
-      data: {
-        banner_type: 'hot_offer'
-      }
+      data: data
     }).done((res) => {
 
       sportspass.storage.store('hotoffers', res);
@@ -81,6 +96,28 @@ sportspass.services = {
     }).fail((res) => {
       console.log(res);
       ons.notification.alert('wala!');
+    });
+  },
+
+  accountCards() {
+
+    let user     = sportspass.storage.show('user');
+    let endpoint = '/account/account-member-cards/'+ user.account.id;
+
+    $.ajax({
+      type: "GET",
+      header: {'Content-type' : 'application/json'},
+      url: this.host + endpoint
+    }).done((res) => {
+
+      if (res)
+      {
+        sportspass.storage.store('cards', res.cards);
+      }
+     
+    }).fail((res) => {
+
+      console.log(res);
     });
   }
 };

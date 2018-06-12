@@ -6,13 +6,30 @@
 	    	<ons-icon icon="fa-arrow-left"></ons-icon>
 	    </a>
 	  </div>
-	  <div class="center">Home</div>
+	  <div class="center"><img src="img/logo-top.png"></div>
 	  <div class="right">
 	  	<span style="opacity: 0">no text..</span>
 	  </div>
 	</ons-toolbar>
 
 	<div class="home" >
+
+    <div class="home-group-icon clearfix ng-scope">
+      <div id="home-ewallet" >
+          <h4>My Cashback Balance</h4>
+          <p id="home-ewallet-cashback"></p>
+      </div>
+    </div>
+
+    <div class="home-group-icon clearfix ng-scope">
+      <div id="home-ewallet-cards">
+          <p>My Cards</p>
+          <ons-carousel swipeable auto-scroll auto-refresh overscrollable id="carousel" >
+                
+          </ons-carousel>
+      </div>
+    </div>
+
 	  <div class="home-group-icon clearfix ng-scope">
       <a class="home-icon-holder" href="https://store.neatideas.com.au/sportspass/" onclick="sportspass.openExternal(this)">
           <i class="icon-movies"></i>
@@ -30,6 +47,12 @@
           <i class="icon-bowling"></i>
           <h5> Bowling </h5>
       </a>
+
+      <a class="home-icon-holder" href="https://sportspass.com.au/login" onclick="sportspass.openExternal(this)">
+          <i class="icon-addcard"></i>
+          <h5> Add Card </h5>
+      </a>
+
       <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onclick="sportspass.openExternal(this)">
           <i class="icon-gift"></i>
           <h5> Gift Ideas </h5>
@@ -46,6 +69,12 @@
           <i class="icon-clubperks"></i>
           <h5> Club Perks </h5>
       </div>
+
+       <a class="home-icon-holder" href="https://sportspass.com.au/login" onclick="sportspass.openExternal(this)">
+          <i class="icon-cashback"></i>
+          <h5> Cash Back </h5>
+      </a>
+
 		</div>
 	</div>
 </ons-page>

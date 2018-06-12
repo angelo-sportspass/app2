@@ -61,7 +61,8 @@
 
 }
 
-body {font-family: 'exoregular';}
+body,
+.alert-dialog-container {font-family: 'exoregular';}
 .home-page .page__background,
 .landing-page .page__background  {
     background: url(../img/app-bg.jpg) 83% top no-repeat;
@@ -87,15 +88,15 @@ body {font-family: 'exoregular';}
 
 #button-login {
 	background-color: #5ccaf6;
-	color: #000;
-	font-weight: bold;
+	color: #fff;
+	font-weight: normal;
 	margin-bottom: 15px;
 }
 
 #button-register {
 	background-color: #000;
 	color: #fff;
-	font-weight: bold;
+	font-weight: normal;
 }
 
 #hotoffers-page .top-menu .toolbar--material__left,
@@ -133,6 +134,14 @@ body {font-family: 'exoregular';}
     text-align: center;
 }
 
+.top-menu .center {
+    line-height: 3.5;
+}
+
+.top-menu img {
+    width: 100%;
+}
+
 .clearfix {
     overflow: auto;
 }
@@ -145,21 +154,37 @@ body {font-family: 'exoregular';}
 
 .form-fields {
     text-align: center; 
-    margin-top: 30px;
+}
+
+.form-fields.login {
+        margin-top: 5em;
 }
 
 .form-fields ons-input {
-    display: block; 
+    display: block;
     width: 80%;
-    font-family: 'exoregular';
     margin: auto;
-    padding: 10px;
-    border:1px solid #ccc;
+    padding: 5px 7px;
+    border: 1px solid #ccc;
     height: auto;
     font-weight: bold;
+    border-radius: 7px;
     /*color: #ddd;*/
 }
 
+.form-fields ons-input input {
+    font-family: 'exoregular';
+}
+
+.form-fields h3 {
+    font-family: 'exoregular';
+    text-align: center;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.form-fields.signup .button--large,
+.form-fields.login .button--large,
 .form-fields .button--material {
     border-radius: 0px;
     font-family: 'exoregular';
@@ -168,13 +193,56 @@ body {font-family: 'exoregular';}
     width: 85%;
 }
 
+.form-fields.signup .button--large,
+.form-fields.login .button--large {
+    padding: 4px 12px;
+    border-radius: 0px;
+    margin: auto;
+}
+
+.form-fields.login .login-signup-btn {
+    margin-top: 5em;
+}
+
 .form-fields a {
     font-family: 'exoregular';
-    color: #5bcbf3; 
+    color: #5bcbf3;
+    font-size: 14px;
 }
 
 .form-fields p,
 .form-fields h3 {
+    font-family: 'exoregular';
+}
+
+.form-fields.signup ons-list {
+    border: none;
+}
+
+.form-fields.signup .list__item {
+    background: none;
+}
+
+.form-fields.signup .list__item:first-child {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-fields.signup .list__item .list__item__left {
+    padding: 12px 5px 12px 0;
+}
+
+.form-fields.signup .checkbox__checkmark:before {
+    border: 1px solid rgba(195, 195, 195, 0.81);
+}
+
+.form-fields ons-input[type="checkbox"] {
+    border: none;
+    margin-top: 0px;
+}
+
+.form-fields label.confirm-label {
+    font-size: 11px;
     font-family: 'exoregular';
 }
 
@@ -208,8 +276,66 @@ ons-toolbar:not([inline]) {
 .left {
     float: left;
 }
+
+.text-center {
+    text-align: center;
+}
+
+#carousel {
+    width: 100%; 
+        height: 190px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#carousel img {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#home-ewallet-cards p,
+#home-ewallet h4,
+#home-ewallet p {
+    margin: 0px;
+    font-family: 'exoregular';
+}
+
+#home-ewallet-cards p,
+#home-ewallet h4 {
+    color: #fff;
+}
+
+#home-ewallet h4 {
+     font-weight: normal;
+    font-size: 20px;
+
+}
+
+#home-ewallet p {
+    color: #5BCBEE;
+        color: #5BCBEE;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+#home-ewallet-cards,
+#home-ewallet {
+        background: rgba(0, 0, 0,.9);
+    padding: 20px 5px 10px;
+    border-radius: 5px;
+    float: left;
+    margin: 5px 8px;
+    text-align: center;
+    transition: all 0.37s ease;
+    cursor: pointer;
+        width: 90%;
+    border: 0.5px solid #5BCBEE;
+    text-decoration: none;
+}
 /*.page__background  {
 	background-image: url(../img/app-bg.jpg) center top no-repeat;
     background-size: cover;
     background-color: transparent;
 }*/
+
