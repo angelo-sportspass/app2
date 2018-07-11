@@ -2,31 +2,39 @@
 
  	<ons-toolbar class="top-menu">
 	  <div class="left">
-	    <a  onclick=" document.querySelector('#mainNavigator').popPage();">
+	    <!-- <a  onclick=" document.querySelector('#mainNavigator').popPage();">
 	    	<ons-icon icon="fa-arrow-left"></ons-icon>
-	    </a>
-	  </div>
+	    </a>-->	  
+      <span style="opacity: 0">no text..</span>
+
+    </div>
 	  <div class="center"><img src="img/logo-top.png"></div>
 	  <div class="right">
-	  	<span style="opacity: 0">no text..</span>
+
+      <a  onclick=" sportspass.logout() " class="logout">
+        Logout
+      </a>
+	  	<!-- <span style="opacity: 0">no text..</span> -->
 	  </div>
 	</ons-toolbar>
 
 	<div class="home" >
 
-    <div class="home-group-icon clearfix ng-scope">
+    <div class="home-wallet-wrapper home-group-icon clearfix ng-scope">
       <div id="home-ewallet" >
           <h4>My Cashback Balance</h4>
           <p id="home-ewallet-cashback"></p>
       </div>
     </div>
 
-    <div class="home-group-icon clearfix ng-scope">
+    <div class="home-cards-wrapper home-group-icon clearfix ng-scope">
       <div id="home-ewallet-cards">
           <p>My Cards</p>
-          <ons-carousel swipeable auto-scroll auto-refresh overscrollable id="carousel" >
-                
-          </ons-carousel>
+
+          <div id="mycards-content">
+            <p class="mycards-header">Add your first card</p>
+            <a id="button-mycards" modifier="large" onclick="sportspass.openExternal(this)" >Add Card</a>
+          </div>
       </div>
     </div>
 
@@ -35,20 +43,22 @@
           <i class="icon-movies"></i>
           <h5> Movies </h5>
       </a>
-      <a class="home-icon-holder" href="https://themeparks.com.au/partner/sportspass" onclick="sportspass.openExternal(this)">
+      <a class="home-icon-holder" href="https://sportspass.experienceoz.com.au/en/gold-coast/theme-parks" onclick="sportspass.openExternal(this)">
             <i class="icon-themeparks"></i>
             <h5> Theme Parks </h5>
       </a>
-      <div class="home-icon-holder" id="hotoffers-page">
+
+      <div class="home-icon-holder" id="hotoffers-page" component="button/hotoffers-page">
           <i class="icon-hotoffers"></i>
           <h5> Hot Offers </h5>
       </div>
+
       <a class="home-icon-holder" href="https://booking.amfbowling.com.au/sportspass/?utm_campaign=SportsPass&utm_source=SportPass&utm_medium=Referral&utm_content=bowling" onclick="sportspass.openExternal(this)">
           <i class="icon-bowling"></i>
           <h5> Bowling </h5>
       </a>
 
-      <a class="home-icon-holder" href="https://sportspass.com.au/login" onclick="sportspass.openExternal(this)">
+      <a class="home-icon-holder" id="button-add-card" onclick="sportspass.openExternal(this)">
           <i class="icon-addcard"></i>
           <h5> Add Card </h5>
       </a>
@@ -57,20 +67,21 @@
           <i class="icon-gift"></i>
           <h5> Gift Ideas </h5>
       </a>
-      <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onclick="sportspass.openExternal(this)">
+      <a class="home-icon-holder" href="https://sportspass.experienceoz.com.au/en/" onclick="sportspass.openExternal(this)">
           <i class="icon-experience"></i>
           <h5> Experiences </h5>
       </a>
-      <a class="home-icon-holder" href="https://sportspass.giftitnow.com.au/en/" onclick="sportspass.openExternal(this)">
+      <a class="home-icon-holder" href="http://tix.com.au/iframe/sportspass#discount" onclick="sportspass.openExternal(this)">
           <i class="icon-tickets"></i>
           <h5> Tickets </h5>
       </a>
-      <div class="home-icon-holder"  ng-click="hotoffers()">
+
+      <a class="home-icon-holder" id="button-club-perks" onclick="sportspass.openExternal(this)" >
           <i class="icon-clubperks"></i>
           <h5> Club Perks </h5>
-      </div>
+      </a>
 
-       <a class="home-icon-holder" href="https://sportspass.com.au/login" onclick="sportspass.openExternal(this)">
+       <a class="home-icon-holder" id="button-cash-back" onclick="sportspass.openExternal(this)">
           <i class="icon-cashback"></i>
           <h5> Cash Back </h5>
       </a>

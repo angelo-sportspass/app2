@@ -13,7 +13,7 @@ myApp.services = {
           data: data,
           header: {'Content-type' : 'application/json'},
           //change the url for your project
-          url: 'http://api.sportsnomads.com.au/v1/account/login',
+          url: 'http://api.sportspass.com.au/v1/account/login',
           success: function(data){
               ons.notification.alert(data.account.first_name);
               // alert('Your comment was successfully added');
@@ -43,7 +43,7 @@ myApp.services = {
         type: 'GET',
         header: {'Content-type' : 'application/json'},
         //change the url for your project
-        url: 'http://api.sportsnomads.com.au/v1/banner/banner-search?search=true',
+        url: 'http://api.sportspass.com.au/v1/banner/banner-search?search=true',
         success: function(data){
 
           console.log(data.banners);

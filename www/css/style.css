@@ -128,6 +128,10 @@ body,
     background-color: #fff;
 }
 
+.logout {
+    font-size: 13px;
+}
+
 .top-menu div {
     color: #fff;
     font-family: 'exoregular';
@@ -174,6 +178,7 @@ body,
 
 .form-fields ons-input input {
     font-family: 'exoregular';
+    padding-top: 2px;
 }
 
 .form-fields h3 {
@@ -324,14 +329,36 @@ ons-toolbar:not([inline]) {
         background: rgba(0, 0, 0,.9);
     padding: 20px 5px 10px;
     border-radius: 5px;
-    float: left;
-    margin: 5px 8px;
+    /*float: left;*/
+    margin: 5px auto;
     text-align: center;
     transition: all 0.37s ease;
     cursor: pointer;
-        width: 90%;
+        width: 80%;
     border: 0.5px solid #5BCBEE;
     text-decoration: none;
+}
+
+#mycards-content #button-mycards {
+        width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #5ccaf6;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'exoregular';
+    padding: 8px 5px;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+}
+
+#mycards-content .mycards-header {
+    margin: 15px 0;
+}
+
+.page[status-bar-fill] > .navigation-bar {
+    padding-top: 5%;
 }
 /*.page__background  {
 	background-image: url(../img/app-bg.jpg) center top no-repeat;

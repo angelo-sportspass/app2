@@ -9,15 +9,17 @@
 	  </div>
 	  <div class="center"><img src="img/logo-top.png"></div>
 	  <div class="right">
-      <span style="opacity: 0">no text..</span>
+      <a  onclick=" sportspass.logout() " class="logout">
+        Logout
+      </a>
     </div>
 	</ons-toolbar>
 
 	<div class="hotoffers">
-    <div class="hotoffers-group text-center clearfix">
+    <div class="hotoffers-category-wrapper">
       <select id="categories" component="select/categories" class="select-input">
         
-        <option value="">-- All Offers --</option>
+        <option value="">All Offers</option>
         <option value="25">Club Perks</option>
         <option value="11">Movies</option>
         <option value="2">Experiences</option>
@@ -30,7 +32,8 @@
         <option value="27">Cashback</option>
     
       </select>
-
+    </div>
+    <div class="hotoffers-group text-center clearfix">
   	  <ons-row id="hotoffer-list">
         <!-- <ons-col width="50%">
           <img width="100%" src="//s3-ap-southeast-2.amazonaws.com/sportspass/Production/banners/64ZePHgUejicWjbbc0Sa.png " />
@@ -41,6 +44,5 @@
       </ons-row>
     </div>
 	</div>
-
 </ons-page>
 
